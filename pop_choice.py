@@ -16,18 +16,14 @@ def process_input():
 def clear_output(event):
     output_label.config(text="")
 
-# Ana pencere
 root = tk.Tk()
 root.title("Pop Choice")
 root.geometry("1000x500")
 root.configure(bg="#000000")  # siyah arka plan
 
-# Ortalamak için çerçeve
 frame = tk.Frame(root, bg="#000000")
 frame.pack(expand=True)
 
-
-# Title
 title = tk.Label(
     frame,
     text='🎬 Pop Choice',
@@ -37,8 +33,6 @@ title = tk.Label(
 )
 title.pack(pady=20)
 
-
-# Selamlama
 greeting = tk.Label(
     frame,
     text="Hello my friend! What kind of movie you are looking for?",
@@ -48,7 +42,6 @@ greeting = tk.Label(
 )
 greeting.pack(pady=20)
 
-# Girdi alanı
 entry = tk.Entry(
     frame,
     width=50,
@@ -61,7 +54,6 @@ entry = tk.Entry(
 entry.pack(pady=10)
 entry.bind("<KeyRelease>", clear_output)
 
-# Buton
 button = tk.Button(
     frame,
     text="🔍 Search",
@@ -76,7 +68,6 @@ button = tk.Button(
 )
 button.pack(pady=20)
 
-# Çıktı alanı
 output_label = tk.Label(
     frame,
     text="",
@@ -87,5 +78,4 @@ output_label = tk.Label(
 )
 output_label.pack(pady=10)
 
-# Başlat
 root.mainloop()
